@@ -136,19 +136,19 @@ function generateRandomFruit() {  // return an object with X and Y
 }
 
 function collisions () {
-    if (snake[snake.length -1].x > canvas.width) {
+    if (snake[snake.length -1].x == canvas.width) {
         snake[snake.length -1].x = 0;
     }
 
-    if (snake[snake.length -1].x < 0) {
-        snake[snake.length -1].x = canvas.width;
+    if (snake[snake.length -1].x == -20) {
+        snake[snake.length -1].x = 580;
     }
 
-    if (snake[snake.length -1].y < 0) {
-        snake[snake.length -1].y = canvas.height;
+    if (snake[snake.length -1].y == -20) {
+        snake[snake.length -1].y = 580;
     }
 
-    if (snake[snake.length -1].y > canvas.height) {
+    if (snake[snake.length -1].y == canvas.height) {
         snake[snake.length -1].y = 0;
     }
 
